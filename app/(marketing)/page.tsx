@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import Hero from "@/components/sections/Hero";
-import CustomCursor from "@/components/motion/CustomCursor";
+import TheProblem from "@/components/sections/TheProblem";
+import ServicesTrinity from "@/components/sections/ServicesTrinity";
+import Proof from "@/components/sections/Proof";
+import Process from "@/components/sections/Process";
+import AuditCTA from "@/components/sections/AuditCTA";
+import AboutEthan from "@/components/sections/AboutEthan";
+import FAQ, { FAQJsonLd } from "@/components/sections/FAQ";
+import FinalCTA from "@/components/sections/FinalCTA";
+import { homepageFaqs } from "@/lib/content/faqs";
 
 export const metadata: Metadata = {
-  title: "Fresh Lime Media — SEO, AEO & AI Automation for Service Businesses",
+  title: "Fresh Lime Media — SEO, AEO & AI Automation",
   description:
-    "Get found on Google. Get cited by AI. Fresh Lime Media is a boutique SEO, AEO & AI automation agency for service businesses in Utah and beyond.",
+    "Boutique SEO, AEO & AI automation studio for service businesses. Get found on Google. Get cited by AI. Get more calls than you can answer.",
   openGraph: {
     title: "Fresh Lime Media — SEO, AEO & AI Automation",
     description:
@@ -17,8 +25,16 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      <CustomCursor />
+      <FAQJsonLd items={homepageFaqs} />
       <Hero />
+      <TheProblem />
+      <ServicesTrinity />
+      <Proof />
+      <Process />
+      <AuditCTA />
+      <AboutEthan />
+      <FAQ items={homepageFaqs} />
+      <FinalCTA />
     </>
   );
 }
