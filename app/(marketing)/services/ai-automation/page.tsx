@@ -10,7 +10,7 @@ import TiltCard from "@/components/ui/TiltCard";
 import { automationFaqs } from "@/lib/content/faqs";
 
 export const metadata: Metadata = {
-  title: "AI Automation for Service Businesses — Lead Capture on Autopilot",
+  title: "AI Automation — Lead Capture & Nurture on Autopilot",
   description:
     "GoHighLevel workflow builds, AI receptionists, automated reporting dashboards, and CRM integration. We build the pipeline that turns clicks into calls into customers.",
 };

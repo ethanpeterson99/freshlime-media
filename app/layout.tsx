@@ -53,6 +53,31 @@ export const viewport: Viewport = {
   colorScheme: "light",
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Fresh Lime Media",
+  url: siteUrl,
+  logo: `${siteUrl}/logo.png`,
+  description:
+    "Boutique SEO, AEO & AI automation studio for service businesses.",
+  founder: {
+    "@type": "Person",
+    name: "Ethan Peterson",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Saratoga Springs",
+    addressRegion: "UT",
+    addressCountry: "US",
+  },
+  email: "ethan@freshlimemedia.com",
+  sameAs: [
+    "https://linkedin.com/company/fresh-lime-media",
+    "https://x.com/freshlimemedia",
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -63,6 +88,12 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${geist.variable} ${jetbrainsMono.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+      </head>
       <body className="font-sans antialiased">{children}</body>
     </html>
   );
