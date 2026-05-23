@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+/* ─── Brand Color Tokens ─────────────────────────────────────────── */
+:root {
+  --lime-acid:   #C8FF3D;
+  --lime-deep:   #84A800;
+  --lime-pulp:   #E8FF9E;
+  --off-white:   #FAFAF5;
+  --paper:       #F2F1E8;
+  --ink:         #0E1208;
+  --smoke:       #54574A;
+  --mist:        #BDBFB0;
+  --coral:       #FF6B4A;
+  --deep-night:  #0A0F05;
+
+  /* Typography scale */
+  --text-display-xl: 4.5rem;
+  --text-display-lg: 3.5rem;
+  --text-display-md: 2.5rem;
+  --text-display-sm: 1.875rem;
+  --text-body-lg:    1.25rem;
+  --text-body:       1.0625rem;
+  --text-body-sm:    0.9375rem;
+  --text-caption:    0.8125rem;
+
+  /* Line heights */
+  --lh-display: 0.95;
+  --lh-heading: 1.1;
+  --lh-body:    1.6;
+
+  /* Spacing */
+  --page-gutter: clamp(1.25rem, 5vw, 5rem);
+  --section-gap: clamp(4rem, 10vw, 10rem);
+}
+
+/* ─── Base ───────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--off-white);
+  color: var(--ink);
+  font-size: var(--text-body);
+  line-height: var(--lh-body);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* ─── Grain overlay (4% opacity noise) ──────────────────────────── */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+/* ─── Tailwind theme extensions ──────────────────────────────────── */
+@theme {
+  --color-lime-acid:  #C8FF3D;
+  --color-lime-deep:  #84A800;
+  --color-lime-pulp:  #E8FF9E;
+  --color-off-white:  #FAFAF5;
+  --color-paper:      #F2F1E8;
+  --color-ink:        #0E1208;
+  --color-smoke:      #54574A;
+  --color-mist:       #BDBFB0;
+  --color-coral:      #FF6B4A;
+  --color-deep-night: #0A0F05;
+
+  --font-display: var(--font-fraunces), Georgia, serif;
+  --font-sans:    var(--font-geist), system-ui, sans-serif;
+  --font-mono:    var(--font-jetbrains-mono), 'Courier New', monospace;
+}
+
+/* ─── Typography helpers ─────────────────────────────────────────── */
+.text-display-xl { font-size: var(--text-display-xl); line-height: var(--lh-display); }
+.text-display-lg { font-size: var(--text-display-lg); line-height: var(--lh-display); }
+.text-display-md { font-size: var(--text-display-md); line-height: var(--lh-heading); }
+.text-display-sm { font-size: var(--text-display-sm); line-height: var(--lh-heading); }
+.text-body-lg    { font-size: var(--text-body-lg);    line-height: var(--lh-body); }
+.text-body       { font-size: var(--text-body);       line-height: var(--lh-body); }
+.text-body-sm    { font-size: var(--text-body-sm);    line-height: var(--lh-body); }
+.text-caption    { font-size: var(--text-caption);    line-height: 1.4; }
+
+/* ─── Reduce motion ──────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

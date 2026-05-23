@@ -1,0 +1,42 @@
+{
+  "name": "freshlime-media",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "motion": "^11.11.17",
+    "@anthropic-ai/sdk": "^0.32.1",
+    "@hookform/resolvers": "^3.9.1",
+    "@react-pdf/renderer": "^4.0.0",
+    "@sanity/client": "^6.22.5",
+    "@sanity/image-url": "^1.1.0",
+    "next-sanity": "^9.8.12",
+    "posthog-js": "^1.187.0",
+    "posthog-node": "^4.2.1",
+    "react-hook-form": "^7.53.2",
+    "resend": "^4.0.1",
+    "sanity": "^3.65.1",
+    "schema-dts": "^1.1.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.3.2",
+    "prettier": "^3.4.2",
+    "tailwindcss": "^4",
+    "@tailwindcss/postcss": "^4",
+    "typescript": "^5"
+  }
+}
