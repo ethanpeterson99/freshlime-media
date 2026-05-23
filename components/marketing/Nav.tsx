@@ -61,7 +61,7 @@ export default function Nav() {
           {/* Desktop CTAs */}
           <div className="hidden md:flex items-center gap-3">
             <Link
-              href="/resources/tools/aeo-audit"
+              href="/services/aeo"
               className="text-body-sm font-medium px-4 py-2 rounded-full border border-[var(--ink)] text-[var(--ink)] hover:bg-[var(--ink)] hover:text-[var(--lime-acid)] transition-all duration-200"
             >
               Free AEO Audit

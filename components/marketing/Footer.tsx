@@ -4,20 +4,20 @@ import Link from "next/link";
 
 const footerNav = {
   Services: [
-    { label: "SEO Strategy", href: "/services/seo-strategy" },
-    { label: "AEO & AI Visibility", href: "/services/aeo-ai-visibility" },
+    { label: "SEO Strategy", href: "/services/seo" },
+    { label: "AEO & AI Visibility", href: "/services/aeo" },
     { label: "AI Automation", href: "/services/ai-automation" },
-    { label: "Content & Schema", href: "/services/content-schema" },
+    { label: "All services", href: "/services" },
   ],
   Company: [
     { label: "About", href: "/about" },
     { label: "Work", href: "/work" },
-    { label: "Blog", href: "/resources/blog" },
+    { label: "Resources", href: "/resources" },
     { label: "Contact", href: "/contact" },
   ],
   Tools: [
-    { label: "Free AEO Audit", href: "/resources/tools/aeo-audit" },
-    { label: "Schema Generator", href: "/resources/tools/schema-generator" },
+    { label: "Free AEO Audit", href: "/services/aeo" },
+    { label: "Book a Call", href: "/contact" },
   ],
 };
 

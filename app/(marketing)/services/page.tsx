@@ -1,15 +1,26 @@
 import type { Metadata } from "next";
+import PageHero from "@/components/ui/PageHero";
+import ServicesTrinity from "@/components/sections/ServicesTrinity";
+import Process from "@/components/sections/Process";
+import ServiceCTA from "@/components/sections/ServiceCTA";
 
 export const metadata: Metadata = {
   title: "Services — SEO, AEO & AI Automation",
-  description: "Fresh Lime Media offers SEO strategy, AEO & AI visibility, AI automation, and content & schema services for service businesses.",
+  description:
+    "Three disciplines, one outcome. SEO for organic visibility, AEO for AI citations, AI Automation for lead capture and nurture on autopilot.",
 };
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen pt-32 px-[var(--page-gutter)] max-w-7xl mx-auto">
-      <h1 className="font-display text-display-lg font-black text-[var(--ink)]">Services</h1>
-      <p className="mt-6 text-body-lg text-[var(--smoke)]">Coming soon.</p>
-    </div>
+    <>
+      <PageHero
+        eyebrow="SERVICES"
+        title="Three disciplines. One outcome: more revenue."
+        subtitle="We do three things well, not twelve things adequately. SEO for organic search. AEO for AI answers. AI Automation for the pipeline that turns visibility into customers."
+      />
+      <ServicesTrinity />
+      <Process />
+      <ServiceCTA />
+    </>
   );
 }
